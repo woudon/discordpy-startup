@@ -1,6 +1,11 @@
 from discord.ext import commands
+import discord
 import os
 import traceback
+
+
+client = MyClient()
+client.run('my token goes here')
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -14,14 +19,15 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-
 async def js(ctx):
     await ctx.send('jkじゃい')
     
 @bot.command()
-
 async def jk(ctx):
     await ctx.send('jkじゃい')
 
+@client.event
+async def on_ready():
+    await ctx.send('Ready!')
 
 bot.run(token)

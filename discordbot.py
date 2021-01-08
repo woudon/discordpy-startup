@@ -20,7 +20,7 @@ async def js(ctx):
     
 @bot.command()
 
-async def j(ctx):
+async def jk(ctx):
     await ctx.send('jkじゃい')
 
 

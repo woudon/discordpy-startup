@@ -1,11 +1,6 @@
 from discord.ext import commands
-import discord
 import os
 import traceback
-
-
-client = MyClient()
-client.run('my token goes here')
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -25,5 +20,6 @@ async def js(ctx):
 @bot.command()
 async def jk(ctx):
     await ctx.send('jkじゃい')
+
 
 bot.run(token)

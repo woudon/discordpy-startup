@@ -26,8 +26,4 @@ async def js(ctx):
 async def jk(ctx):
     await ctx.send('jkじゃい')
 
-@client.event
-async def on_ready():
-    await ctx.send('Ready!')
-
 bot.run(token)

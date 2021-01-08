@@ -13,13 +13,13 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 
-@bot.command()
-async def js(ctx):
-    await ctx.send('jkじゃい')
-    
-@bot.command()
-async def jk(ctx):
-    await ctx.send('jkじゃい')
-
+@client.event
+async def on_message(message):
+    # 送信者がbotである場合は弾く
+    if message.author.bot:
+        return 
+    # メッセージの本文が /tango だった場合
+    if message.content == "1":
+        await message.channel.send(type(message.content))
 
 bot.run(token)

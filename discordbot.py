@@ -17,6 +17,11 @@ async def on_command_error(ctx, error):
 
 async def js(ctx):
     await ctx.send('jkじゃい')
+    
+@bot.command()
+
+async def js(ctx):
+    await ctx.send('jkじゃい')
 
 
 bot.run(token)
